@@ -52,7 +52,7 @@ array = [3, -2, 7.5, 90].map {|n| n.abs}
 name.include?('David')
 end
 #=> ["David Rogers", "Larry David"]
-#The .select picks out the 
+#The .select picks out anything that has David in it.
 
 
 # create a list of the names Joe, Kelly, Spencer, Peter, Ivan, Andell, Angela, Jeff to use for the next five tasks.
