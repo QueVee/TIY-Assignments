@@ -12,9 +12,6 @@ class TestGame < MiniTest::Unit::TestCase
     assert Game.new.deck
   end
 
-  def test_play_card
-    #@deck.delete_at(rand(array.length))
-    assert @deck.delete_at(rand(@deck.length))
-	end
+
 end
 

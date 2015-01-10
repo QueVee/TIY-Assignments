@@ -18,9 +18,15 @@
 
 class Game
   attr_accessor :deck #this means we can
- #interact with the instance variable @grid
-  #and we can pretend it's a method: Game.new.grid
+ #interact with the instance variable @grid(@deck)
+  #and we can pretend it's a method: Game.new.grid(deck)
 
-  def initialize #this runs when Game.new is called
-    @deck = [
+  def initialize
+    @deck = :the_cards
+  end
+
+  
+
+end
+
   
