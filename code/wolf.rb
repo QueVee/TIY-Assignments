@@ -1,4 +1,6 @@
-#A wolf has a name and an age. The leader of the wolfpack is the oldest wolf. All wolves are submissive to older wolves and dominant over younger wolves.
+#A wolf has a name and an age. 
+#The leader of the wolfpack is the oldest wolf. 
+#All wolves are submissive to older wolves and dominant over younger wolves.
 class Wolf
 
 	attr_accessor :name, :age
@@ -8,5 +10,15 @@ class Wolf
 		@age = age
 	end
 
+	def howl
+		"HOWWWWWL!"
+	end
 
+	def jump?
+		true
+	end
+
+	def dominant?(young_wolf)
+		@age > young_wolf.age
+	end
 end
