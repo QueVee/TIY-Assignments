@@ -11,8 +11,13 @@ class Wolf
 	end
 
 	def howl
-		"HOWWWWWL!"
+		"Howwwwwl!"
 	end
+
+	def loud_howl
+		@age >= 3	
+	end
+
 
 	def jump?
 		true
