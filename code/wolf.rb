@@ -16,8 +16,7 @@ class Wolf
 		@age >= 3	
 	end
 
-
-	def jump?
+	def attack?
 		true
 	end
 
