@@ -43,7 +43,7 @@ class Testwolf < MiniTest::Unit::TestCase
 
 	def test_if_wolf_join_pack_and_takes_over_leader # wolf joins a pack and becomes leader, the pack throws out the former leader.
 		new_wolf = Wolf.new("New Chief", 16)
-		assert_equal @wolf.takes_over?(new_wolf), false
+		assert_equal @wolf.stays_in_charge?(new_wolf), false
 	end
 
 end

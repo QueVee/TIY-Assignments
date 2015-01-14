@@ -10,17 +10,15 @@ A wolfpack can take down different sized things depending on how big it is.
 A pack of 2 wolves can hunt a gazelle.
 A pack of 5 wolves can get a water buffalo.
 A pack of 30 wolves can eat a rhinoceros.
+
 =end 
 
 class Wolfpack
 
-	attr_accessor :name, :age
+	attr_reader :members
 
-	def initialize(name, age)
-		@name = name
-		@age = age
+	def initialize(members)
+		@members = members
 	end
-
-	
 
 end

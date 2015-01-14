@@ -24,7 +24,7 @@ class Wolf
 		@age > young_wolf.age
 	end
 
-	def takes_over?(wolf)
+	def stays_in_charge?(wolf)
 		@age > wolf.age
 	end
 end
