@@ -24,8 +24,9 @@ class TestDeck < MiniTest::Unit::TestCase
   end
  
   def test_there_are_fiftytwo_cards
-    assert_equal 52, @deck.card.flatten.length
+    assert_equal 52, @deck.card.flatten.length #test deck is there
     assert_equal 4, @deck.names.length
+    assert_equal 51, @game.deck.length #test what is left in deck
   end
 
 end
