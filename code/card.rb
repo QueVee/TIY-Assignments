@@ -10,10 +10,14 @@ class Card
 	def value
 		if @value.is_a?(Fixnum)
 			@value
-		elsif @value == :ace
+		elsif @value == :jack
 			11
-		else
-			10
+		elsif @value == :queen
+			12
+		elsif @value == :king
+			13	
+		else @value ==:ace
+			14
 		end
 	end
 

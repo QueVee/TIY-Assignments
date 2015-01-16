@@ -7,22 +7,28 @@ class CardTest < MiniTest::Unit::TestCase
 		@card = Card.new(7, :spades)
 	end
 
-	def test_card_card_has_suit
+	def test_card_has_suit
 		assert_equal :spades, @card.suit 
 	end
 
-	def test_card_has_value
-		assert_equal 7, @card_value 
+	def test_jack_valued_at_11
+		jack = Card.new(:jack, :diamonds)
+		assert_equal 11, jack.value
 	end
 
-	def test_face_card_valued_at_10
-		card = Card.new(:king, :diamonds)
-		assert_equal 10, card.value
+	def test_queen_valued_at_12
+		queen = Card.new(:queen, :spades)
+		assert_equal 12, queen.value
 	end
 
-	def test_ace_valued_at_11
-		ace = Card.new(:ace, :spades)
-		assert_equal 11, ace.value
+	def test_king_value_at_13
+		king = Card.new(:king, :clubs)
+		assert_equal 13, king.value
+	end
+
+	def test_ace_value_at_14
+		ace = Card.new(:ace, :hearts)
+		assert_equal 14, ace.value
 	end
 
 	def test_numbered_card_displays_its_suit_and_value
