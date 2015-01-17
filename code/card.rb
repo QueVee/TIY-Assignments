@@ -1,10 +1,10 @@
 class Card
 
-	attr_reader :suit
+	attr_reader :suits
 
-	def initialize(value, suit)
+	def initialize(value, suits)
 		@value = value
-		@suit = suit
+		@suits = suits
 	end
 
 	def value
@@ -22,6 +22,6 @@ class Card
 	end
 
 	def display
-		"#{@value.to_s.capitalize} of #{suit.to_s.capitalize}"
+		"#{@value.to_s.capitalize} of #{suits.to_s.capitalize}"
 	end
 end
