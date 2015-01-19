@@ -11,6 +11,14 @@ class Deck
 	 			Card.new(value, suit)
 	 		end
 		end
-		@cards.flatten!
+		@cards.flatten!.shuffle
+	end
+
+	def size
+		@cards.length
+	end
+
+	def deal(n)
+		@cards.shift(n)
 	end
 end
