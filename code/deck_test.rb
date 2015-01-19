@@ -17,10 +17,8 @@ class DeckTest < MiniTest::Unit::TestCase
 	def test_deck_can_deal_card
 		deck = @deck.deal(3)
 		assert_equal 49, @deck.size
+		#p deck.inspect
+		#p @deck.inspect
 	end
 
-	def test_deck_returns_new_deck
-		new_deck = Deck.new
-		refute @deck == new_deck
-	end
 end
