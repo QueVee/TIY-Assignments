@@ -7,8 +7,9 @@ class CardTest < MiniTest::Unit::TestCase
 		@card = Card.new(7, :spades)
 	end
 
-	def test_card_has_suits
-		assert_equal :spades, @card.suits 
+	def test_card_has_value_and_suit
+		assert_equal 7, @card.value
+		assert_equal :spades, @card.suit 
 	end
 
 	def test_jack_valued_at_11
