@@ -16,6 +16,10 @@ class Player
 		@hand.max_by{|card| card.value}
 	end
 
+	#def card_display
+	#	@hand.map{ |card| card.display}.join (', ')
+	#end
+
 	def has_2_matching_cards?
 		counts = {}
 		@hand.each do |card|

@@ -1,3 +1,8 @@
+
+#The modern casino game of Three Card Poker is played with a 52-card deck. 
+#There are two bet types available. Before seeing any cards, each player 
+#can make a bet on one, both or neither.
+
 require './card'
 
 class Deck
@@ -10,8 +15,12 @@ class Deck
 	 		['clubs', 'spades', 'diamonds', 'hearts'].map do |suit|
 	 			Card.new(value, suit)
 	 		end
-		end.flatten.shuffle
-		#@cards.flatten!.shuffle
+		end#.flatten
+		@cards.flatten!.shuffle
+	end
+
+	def shuffle
+		@cards = @cards.shuffle!
 	end
 
 	def size

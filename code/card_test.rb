@@ -32,13 +32,19 @@ class CardTest < MiniTest::Unit::TestCase
 		assert_equal 14, ace.value
 	end
 
-	def test_numbered_card_displays_its_suits_and_value
-		assert_equal "7 of Spades", @card.display 
+	def test_card_value_will_display_as_a_string
+		assert_equal 7, @card.value
 	end
 
-	def test_face_card_displays_suits_and_face_value
+	def test_numbered_card_displays_its_suit_and_value
+		assert_equal "7 of Spades", @card.display
+	end
+
+	def test_face_card_displays_suit_and_face_value
 		king_of_clubs = Card.new(:king, :clubs)
 		assert_equal "King of Clubs", king_of_clubs.display
 	end
+		
+
 end
 

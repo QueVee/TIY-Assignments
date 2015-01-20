@@ -1,3 +1,5 @@
+require './to_english'
+
 class Card
 
 	attr_reader :suit
@@ -23,7 +25,7 @@ class Card
 
 	
 	def display
-		"#{@value.to_s.capitalize} of #{@suit.to_s.capitalize}"
+		"#{@value.to_s.capitalize} of #{@suit.capitalize}"
 	end
 
 end
