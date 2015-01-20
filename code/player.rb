@@ -23,8 +23,17 @@ class Player
     counts.any?{|value, number| number == 2 }
 	end
 
-	def flush
-
+	def has_3_matching_suits?
+		counts = {}
+		@hand.each do |card|
+			puts "counts is #{counts}"
+      puts "suit is #{card.suit}"
+      puts "counts for that suit is #{counts[card.suit]}"
+      puts "changing the above to an integer and adding 1 gets #{counts[card.suit].to_i + 1}"
+      counts[card.suit] = counts[card.suit].to_i + 1
+      puts "counts is #{counts}"
+    end
+    counts.any?{|suit, number| number == 3 }
 	end
 
 	def straight

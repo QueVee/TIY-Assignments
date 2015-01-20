@@ -27,4 +27,13 @@ class PlayerTest < MiniTest::Unit::TestCase
 		assert @newhand.has_2_matching_cards?
 	end
 
+	def test_hand_has_3_matching_suits_for_a_flush
+		card1 = Card.new(3, :spades)
+		card2 = Card.new(9, :spades)
+		card3 = Card.new(5, :spades)
+		newhand = Player.new([card1, card2, card3])
+		puts "test matching with spades spades spades"
+		assert newhand.has_3_matching_suits?
+	end
+
 end
