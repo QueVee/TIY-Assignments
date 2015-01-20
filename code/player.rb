@@ -6,6 +6,11 @@ class Player
 		@hand = cards
 	end
 
+	#def has_no_matching_cards
+	#	card_values = @hand.collect{|card| card.value}
+	#	unique_values = card.values.uniq
+	#end
+
 	def high_card
 		@hand.max_by{|card| card.value}
 	end
@@ -36,12 +41,21 @@ class Player
     counts.any?{|suit, number| number == 3 }
 	end
 
-	def straight
+	def has_straight?
+		
+  end
 
-	end
-
-	def three_of_a_kind
-
+	def has_3_matching_values?
+		counts = {}
+		@hand.each do |card|
+			puts "counts is #{counts}"
+      puts "value is #{card.value}"
+      puts "counts for that value is #{counts[card.value]}"
+      puts "changing the above to an integer and adding 1 gets #{counts[card.value].to_i + 1}"
+      counts[card.value] = counts[card.value].to_i + 1
+      puts "counts is #{counts}"
+    end
+    counts.any?{|value, number| number == 3 }
 	end
 
 	def straight_flush
