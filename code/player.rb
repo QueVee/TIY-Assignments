@@ -6,10 +6,11 @@ class Player
 		@hand = cards
 	end
 
-	#def has_no_matching_cards
-	#	card_values = @hand.collect{|card| card.value}
-	#	unique_values = card.values.uniq
-	#end
+	def has_no_matching_cards?
+		card_suits = @hand.collect{|card| card.suit}
+		unique_suits = card_suits.uniq
+		card_suits.size == unique_suits.size
+	end
 
 	def high_card
 		@hand.max_by{|card| card.value}

@@ -15,9 +15,9 @@ class PlayerTest < MiniTest::Unit::TestCase
 		#p @player.inspect
 	end
 
-	#def test_has_no_matching_cards
-	#	assert @player.has_no_matching_cards?
-	#end
+	def test_has_no_matching_cards
+		assert @player.has_no_matching_cards?
+	end
 
 	def test_high_card_value_returned
 		 assert_equal 14, @player.high_card.value
