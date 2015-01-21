@@ -1,39 +1,31 @@
-require '../to_english'
-class Card
-  include Comparable
+require_relative '../card'
 
-  attr_reader :value, :suit
+class PokerCard < Card
 
-  def initialize(value, suit)
-    @value = value
-    @suit = suit
-  end
+  #attr_reader :suit
 
-  def to_s
-    "#{string_value} of #{@suit}"
-  end
-
-  def string_value
-    @value.respond_to?(:to_english) ? @value.to_english : @value
-  end
-
-  def <=>(other_card)
-    value <=> other_card.value
-  end
+  #def initialize(value, suit)
+   # @value = value
+    #@suit = suit
+  #end
 
   def value
-    case @value
-    when Fixnum
-      @value
-    when :jack
+    i#f @value.is_a?(Fixnum)
+     # @value
+    #elsif @value == :jack
+    if @value == :jack
       11
-    when :queen
+    elsif @value == :queen
       12
-    when :king
-      13
-    when :ace
+    elsif @value == :king
+      13  
+    else @value ==:ace
       14
     end
   end
+
+  #def display
+  #  "#{@value.to_s.capitalize} of #{@suit.capitalize}"
+  #end
 
 end

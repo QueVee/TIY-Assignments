@@ -1,35 +1,30 @@
 require 'minitest/autorun'
-require './card'
-class CardTest < MiniTest::Unit::TestCase
+require './pokercard'
 
-  def setup
-    @seven_of_hearts = Card.new(7, :hearts)
-    @ace_of_spades = Card.new(:ace, :spades)
+class PokercardTest < MiniTest::Unit::TestCase
+
+  def test_jack_valued_at_11
+    jack = Card.new(:jack, :diamonds)
+    assert_equal 11, jack.value
   end
 
-  def test_card_has_suit
-    assert_equal :hearts, @seven_of_hearts.suit
+  def test_queen_valued_at_12
+    queen = Card.new(:queen, :spades)
+    assert_equal 12, queen.value
   end
 
-  def test_card_has_value
-    assert_equal 7, @seven_of_hearts.value
+  def test_king_value_at_13
+    king = Card.new(:king, :clubs)
+    assert_equal 13, king.value
   end
 
-  def test_card_can_be_displayed
-    assert_equal "seven of hearts", @seven_of_hearts.to_s
+  def test_ace_value_at_14
+    ace = Card.new(:ace, :hearts)
+    assert_equal 14, ace.value
   end
 
-  def test_face_card_can_be_displayed
-    assert_equal "ace of spades", @ace_of_spades.to_s
+  def test_card_value_will_display_as_a_string
+    assert_equal 7, @card.value
   end
-
-  def test_cards_are_comparable
-    three_of_clubs = Card.new(3, :clubs)
-    nine_of_diamonds = Card.new(9, :diamonds)
-    jack_of_hearts = Card.new(:jack, :hearts)
-    assert three_of_clubs < nine_of_diamonds
-    assert nine_of_diamonds < jack_of_hearts
-    assert jack_of_hearts < @ace_of_spades
-  end
-
+    
 end
