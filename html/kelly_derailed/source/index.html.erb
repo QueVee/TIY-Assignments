@@ -1,0 +1,67 @@
+---
+title: Project_11
+---
+
+<!-- Add your site or application content here -->
+<ul>
+<header>
+	<h1>Ruby Project_11</h1>
+</header>
+<style>
+	header {
+		background-color: #BFAC85;
+		display: block;
+		align-content: stretch;
+	}
+	body {background-color: #D4BF94}
+	a:link    {color:#5B7314; background-color:transparent; text-decoration:none}
+	a:visited {color:#5B7314; background-color:transparent; text-decoration:none}
+	a:hover   {color:#7A991A; background-color:transparent; text-decoration:none}
+	a:active  {color:#7A991A; background-color:transparent; text-decoration:underline}
+</style>
+<body>
+<br />
+	<% ["contents", "resources", "about"].each do |word| %>
+			<a href="http://localhost:4567/addlpage/<%=word%>.html">
+				<%= word.capitalize %>
+					</a>
+		<p> 
+	<% end %>
+
+<hr />
+</ul>
+ 
+<ul>  
+<h3>Topics</h3>
+</ul>
+<ul>
+	<ul>
+	<strong>Ruby</strong>
+	<br />
+	<br />
+	<strong>Web Development</strong>
+	<br />
+	<br />
+	<strong>Middleman</strong>
+	<br />
+	<br />
+	<strong></strong>
+	<br />
+	<strong>The Iron Yard</strong>
+	<br />
+
+</ul>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<hr />
+<footer>
+<%= partial "footer", locals: {classes: "TheIronYard"} %>
+</footer>
+
+
+</body>
