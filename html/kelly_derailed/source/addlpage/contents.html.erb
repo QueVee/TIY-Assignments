@@ -1,0 +1,40 @@
+---
+title: Contents
+---
+
+<!-- Add your site or application content here -->
+<ul>
+<header>
+  <div class="contents">
+  <h1>Contents</h1>
+  </div>
+</header>
+<style>
+  body {background-color: #D4BF94}
+  a:link    {color:#5B7314; background-color:transparent; text-decoration:none}
+  a:visited {color:#5B7314; background-color:transparent; text-decoration:none}
+  a:hover   {color:#7A991A; background-color:transparent; text-decoration:none}
+  a:active  {color:#7A991A; background-color:transparent; text-decoration:underline}
+</style>
+ 
+  <a href="/" title="Back to the Home page"><b>HOME</b></a>
+    <br />
+    <br />
+    <% ["resources", "about"].each do |word| %>
+      <a href="http://localhost:4567/addlpage/<%=word%>.html">
+        <%= word.capitalize %>
+          </a>
+    <p> 
+  <% end %>
+<hr />
+<body>
+<br />
+<br />
+<hr />
+<a href="/" title="Back to the Home page"><b>HOME</b></a> | <a href="#" title="To the top of this page"><b>BACK TO TOP</b></a>
+<br />
+<footer>
+<%= partial "footer1", locals: {classes: "TheIronYard"} %>
+</footer>
+</ul>
+</body>
