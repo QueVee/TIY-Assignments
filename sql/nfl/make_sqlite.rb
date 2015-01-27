@@ -54,4 +54,3 @@ end
 #=end
 
 database.close
-
